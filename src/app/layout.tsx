@@ -1,5 +1,4 @@
 import { Analytics } from '@vercel/analytics/react';
-import { cc } from '@/utility/css';
 import { IBM_Plex_Mono } from 'next/font/google';
 import { Metadata } from 'next';
 import { BASE_URL, SITE_DESCRIPTION, SITE_TITLE } from '@/site/config';
@@ -8,6 +7,7 @@ import ThemeProviderClient from '@/site/ThemeProviderClient';
 import Nav from '@/site/Nav';
 import ToasterWithThemes from '@/toast/ToasterWithThemes';
 import PhotoEscapeHandler from '@/photo/PhotoEscapeHandler';
+import { TailwindIndicator } from '@/components/TailwindIndicator';
 
 import '../site/globals.css';
 
@@ -68,16 +68,16 @@ export default function RootLayout({
     >
       <body className={ibmPlexMono.variable}>
         <ThemeProviderClient>
-          <main className={cc(
-            'px-3 pb-3',
-            'lg:px-6 lg:pb-6',
-          )}>
-            <Nav />
-            <StateProvider>
-              {children}
-            </StateProvider>
+          <div className="mx-4 mb-40 mt-8 flex flex-col px-5 antialiased md:flex-row lg:mx-auto xl:max-w-7xl lg:px-0">
+            <main className="mt-6 flex min-w-0 flex-auto flex-col px-2 md:px-0">
+              <Nav />
+              <StateProvider>
+                {children}
+              </StateProvider>
+            </main>
             <Analytics />
-          </main>
+          </div>
+          <TailwindIndicator />
           <PhotoEscapeHandler />
           <ToasterWithThemes />
         </ThemeProviderClient>
