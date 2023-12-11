@@ -68,7 +68,7 @@ export default function RootLayout({
     >
       <body className={ibmPlexMono.variable}>
         <ThemeProviderClient>
-          <div className="mx-4 mb-40 mt-8 flex flex-col px-5 antialiased md:flex-row lg:mx-auto xl:max-w-7xl lg:px-0">
+          <div className="mx-4 mb-40 mt-8 flex flex-col px-5 antialiased md:flex-row lg:mx-auto xl:max-w-7xl">
             <main className="mt-6 flex min-w-0 flex-auto flex-col px-2 md:px-0">
               <Nav />
               <StateProvider>
