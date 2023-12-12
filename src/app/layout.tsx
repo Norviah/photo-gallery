@@ -76,11 +76,11 @@ export default function RootLayout({
               </StateProvider>
             </main>
           </div>
-          <Analytics />
-          <TailwindIndicator />
           <PhotoEscapeHandler />
           <ToasterWithThemes />
         </ThemeProviderClient>
+        <TailwindIndicator />
+        <Analytics />
       </body>
     </html>
   );
