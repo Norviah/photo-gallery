@@ -75,8 +75,8 @@ export default function RootLayout({
                 {children}
               </StateProvider>
             </main>
-            <Analytics />
           </div>
+          <Analytics />
           <TailwindIndicator />
           <PhotoEscapeHandler />
           <ToasterWithThemes />
